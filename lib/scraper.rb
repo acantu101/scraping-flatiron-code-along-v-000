@@ -10,7 +10,7 @@ class Scraper
     end
 
     def get_courses
-      @@doc.css(".posts-holder")
+      get_page.css(".posts-holder")
     end
 
     def make_courses
