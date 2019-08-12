@@ -18,8 +18,8 @@ class Scraper
       get_courses.each do |course|
         new_course = Course.new
         new_course.title = course.css("h2")
-        @schedule - 
-        
+        @schedule -
+
       binding.pry
      end
    end
