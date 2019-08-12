@@ -16,7 +16,8 @@ class Scraper
     def make_courses
       get_courses.each do |course|
         course = Course.new
-    @title = course.css(".post same-height-left")
+     title = course.css(".post same-height-left")
+     @title = title
 
       end
     end
