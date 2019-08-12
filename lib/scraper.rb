@@ -11,15 +11,13 @@ class Scraper
     end
 
     def get_courses
-      get_page.css(".posts-holder")
+      get_page.css(".post")
     end
 
     def make_courses
       get_courses.each do |course|
         new_course = Course.new
-        new_course.title = course.css("h2")
-        @schedule -
-
+        new_course.title = course.css("h2").
       binding.pry
      end
    end
