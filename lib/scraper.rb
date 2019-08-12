@@ -16,8 +16,17 @@ class Scraper
     def make_courses
       get_courses.each do |course|
         course = Course.new
-     title = course.css(".post same-height-left")
-     @title = title
+     course.each do |e|
+       e.css(".date") = schedule
+       if e.include? "<h2>"
+         e = title
+       elsif e.include? "<p>"
+         e = description
+       end
+     end
+   end
+         
+         
 
       end
     end
