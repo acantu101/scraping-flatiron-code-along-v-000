@@ -17,11 +17,11 @@ class Scraper
       get_courses.each do |course|
         course = Course.new
      course.each do |e|
-       e.css(".date") = schedule
+       e.css(".date") = @schedule
        if e.include? "<h2>"
-         e = title
+         e = @title
        elsif e.include? "<p>"
-         e = description
+         e = @description
        end
      end
    end
